@@ -101,7 +101,7 @@ gpSpreadsheet.prototype.putFixedFields = function(data) {
       this.__writeCell__(field.row, field.col, data[key]);
     }
     
-    this.sheetData = getSheetData(this.layout.sourceDataSpreadsheet, this.layout.sheetName);
+    this.sheetData = this.getSheetData(this.layout.sourceDataSpreadsheet, this.layout.sheetName);
     result = webAppAPISuccessResult(data, "fixed fields written");
     
   } catch (e) {
@@ -137,7 +137,7 @@ gpSpreadsheet.prototype.appendRow = function(data) {
     
     var range = this.sheet.getRange(this.sheetData.length + 1, 1, 1, rowData.length);
     range.setValues([rowData]);
-    this.sheetData = getSheetData(this.layout.sourceDataSpreadsheet, this.layout.sheetName);
+    this.sheetData = this.getSheetData(this.layout.sourceDataSpreadsheet, this.layout.sheetName);
     
   } catch (e) {
     var msg = "overlayRowFailed in testing/writing: ";
@@ -187,7 +187,7 @@ gpSpreadsheet.prototype.overlayRow = function(data) {
     }
   }
   
-  this.sheetData = getSheetData(this.layout.sourceDataSpreadsheet, this.layout.sheetName);
+  this.sheetData = this.getSheetData(this.layout.sourceDataSpreadsheet, this.layout.sheetName);
   
   result = webAppAPISuccessResult(data, "overlayRow succeeded");
   
