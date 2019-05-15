@@ -46,21 +46,6 @@ const app = function () {
       "append row": {apitype: "post", dataset: "appendrow", options: {last: 'Smith', first: 'Vinnie', message1: 'm1', message2: 'm2'}} 
     },
     
-    test2: {
-      "get all rows": {apitype: "get", dataset: "getallrows", options: {}},
-      "get matching rows": {apitype: "get", dataset: "getmatchingrows", options: {last: 'Weasley'}},
-      "get exact row": {apitype: "get", dataset: "getmatchingrows", options: {last: 'Weasley', first: 'George'}},
-      "get fixed": {apitype: "get", dataset: "getfixed", options: {}},
-      "get remark": {apitype: "get", dataset: "getremark", options: {}},
-      "get version and topic": {apitype: "get", dataset: "getversionandtopic", options: {}},
-      "put remark": {apitype: "post", dataset: "putremark", options: {remark: 'Hello, my name is Inigo Montoya.'}},
-      "put version and topic": {apitype: "post", dataset: "putversionandtopic", options: {version: 'v2.03.005', topic: 'ABC'}},
-      "overlay exact row": {apitype: "post", dataset: "overlayrow", options: {criteria:{last: 'Potter', first: 'Harry'}, newdata:{message2: 'Harry\'s message2'}}},
-      "overlay multiple rows": {apitype: "post", dataset: "overlayrow", options: {criteria:{last: 'Weasley'}, newdata:{message1: 'Weasley message 1', message2: 'message 2 for the Weasleys'}}},
-      "append row": {apitype: "post", dataset: "appendrow", options: {last: 'Smith', first: 'Vinnie', message1: 'm1', message2: 'm2'}} 
-    },
-    
-
     miGoogle2019: {
       "get course list": {apitype: "get", dataset: "courselist", options: {}},
       "get course data": {apitype: "get", dataset: "coursedata", options: {coursekey: "geoa"}},
