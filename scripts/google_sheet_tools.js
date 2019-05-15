@@ -8,8 +8,8 @@
 //************************************************************************
 var gpSpreadsheet = function(layout) {
   this.layout = layout;
-  this.sheet = getSheet(this.layout.sourceDataSpreadsheet, this.layout.sheetName);
-  this.sheetData = getSheetData(this.layout.sourceDataSpreadsheet, this.layout.sheetName);   
+  this.sheet = this.getSheet(this.layout.sourceDataSpreadsheet, this.layout.sheetName);
+  this.sheetData = this.getSheetData(this.layout.sourceDataSpreadsheet, this.layout.sheetName);   
 }
 
 //-----------------------------------------------------------------------
@@ -230,23 +230,20 @@ gpSpreadsheet.prototype.__rowMeetsCriteria__ = function(rowData, criteria) {
   }
   return meetsCriteria;
 }
-//************************************************************************
-// end of static methods for gpSpreadsheet "class"
-//************************************************************************
 
-//---------------------------------------------------------------
-// Google Sheet utility functions
-//---------------------------------------------------------------
-
-// open spreadsheet document with the given ID
-function openSpreadsheetById(spreadsheetId) {
+//-----------------------------------------------------------------------
+// (private) open spreadsheet document with the given ID
+//-----------------------------------------------------------------------
+gpSpreadsheet.prototype.openSpreadsheetById = function(spreadsheetId) {
   return SpreadsheetApp.openById(spreadsheetId);
 }
 
-// get named sheet from spreadsheet document with the given ID
-function getSheet(spreadsheetId, sheetName) {
+//-----------------------------------------------------------------------
+// (private) get named sheet from spreadsheet document with the given ID
+//-----------------------------------------------------------------------
+gpSpreadsheet.prototype.getSheet = function(spreadsheetId, sheetName) {
   var sheet = null;
-  var doc = openSpreadsheetById(spreadsheetId);
+  var doc = this.openSpreadsheetById(spreadsheetId);
 
   if (doc != null) {
     sheet = doc.getSheetByName(sheetName);
@@ -255,10 +252,12 @@ function getSheet(spreadsheetId, sheetName) {
   return sheet;
 }
 
-// get all the data from the named sheet in the spreadsheet document with the given ID
-function getSheetData(spreadsheetId, sheetName) {
+//-----------------------------------------------------------------------
+// (private) get all the data from the named sheet in the spreadsheet document with the given ID
+//-----------------------------------------------------------------------
+gpSpreadsheet.prototype.getSheetData = function(spreadsheetId, sheetName) {
   var data = null;
-  var sheet = getSheet(spreadsheetId, sheetName);
+  var sheet = this.getSheet(spreadsheetId, sheetName);
 
   if (sheet != null) {
     data = sheet.getDataRange().getValues();
@@ -267,4 +266,7 @@ function getSheetData(spreadsheetId, sheetName) {
   return data;
 }
 
+//************************************************************************
+// end of static methods for gpSpreadsheet "class"
+//************************************************************************
 
