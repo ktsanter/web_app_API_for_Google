@@ -28,7 +28,12 @@ const app = function () {
     miGoogle2019: {
       apibase: 'https://script.google.com/macros/s/AKfycbzrVV2otcnpD2t-II38JVnB7FM7UN5Us9q3964tNHCCiSJOxfU/exec',
       apikey: 'miGoogle2019_webappAPIDemo'
-    }
+    },
+    
+    studentinfo: {
+      apibase: 'https://script.google.com/macros/s/AKfycbw_m3wFqlr3oxLDYi8hfbEEJ8q78eazGNA4OZhQUYioNzico-U/exec',
+      apikey: 'MV_studeninfoAPI'
+    }    
   };
 
   const apiCallPremades = {
@@ -52,6 +57,11 @@ const app = function () {
       "get all instructors": {apitype: "get", dataset: "allinstructorinfo", options: {}},
       "get instructor": {apitype: "get", dataset: "instructorinfo", options: {instructorkey: "fpersimmon"}},
       "put review date": {apitype: "post", dataset: "reviewdate", options: {criteria: {coursekey: 'alg1a'}, newdata:{reviewdate: "'05/14/2019"}}}
+    },
+    
+    studentinfo: {
+      "get all students": {apitype: "get", dataset: "allstudentinfo", options: {}},
+      "get matching students": {apitype: "get", dataset: "studentinfo", options: {first: "Ron", last: "Weasley"}}
     }
   }
   
