@@ -1,0 +1,30 @@
+.request-container {
+  margin-bottom: 20px;
+}
+
+.apiselection {
+  margin-bottom: 10px
+}
+
+.dorequest-container {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.label {
+  margin-right: 6px;
+}
+
+.requestparams {
+  width: 90%;
+}
+
+.results {
+  margin-bottom: 8px;
+}
+
+.results-interior {
+  background-color: var(--MV-white);
+  border: 1px solid black;
+  min-height: 40px;
+}
