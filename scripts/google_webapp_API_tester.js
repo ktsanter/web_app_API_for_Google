@@ -31,11 +31,12 @@ const app = function () {
     },
     
     studentinfo: {
-      apibase: 'https://script.google.com/macros/s/AKfycbw_m3wFqlr3oxLDYi8hfbEEJ8q78eazGNA4OZhQUYioNzico-U/exec',
+      apibase: 'https://script.google.com/macros/s/AKfycbxpMfjVsVXjZuSdkI5FABJHFY5azMdbep7YfMI_OVndxtN_VwI/exec',
       apikey: 'MV_studeninfoAPI'
     }    
   };
 
+  const STUDENT_INFO_SPREADSHEET = '17m8kxYjqTTGHsTFnD3VSTy7P4ztF9f9ggPJz4wTVdO4';
   const apiCallPremades = {
     test: {
       "get all rows": {apitype: "get", dataset: "getallrows", options: {}},
@@ -60,8 +61,8 @@ const app = function () {
     },
     
     studentinfo: {
-      "get all students": {apitype: "get", dataset: "allstudentinfo", options: {}},
-      "get matching students": {apitype: "get", dataset: "studentinfo", options: {first: "Ron", last: "Weasley"}}
+      "get all students": {apitype: "get", dataset: "allstudentinfo", options: {spreadsheetid: STUDENT_INFO_SPREADSHEET}},
+      "get matching students": {apitype: "get", dataset: "studentinfo", options: {spreadsheetid: STUDENT_INFO_SPREADSHEET, first: "Ronald", last: "Weasley"}}
     }
   }
   
