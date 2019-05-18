@@ -62,7 +62,10 @@ const app = function () {
     
     studentinfo: {
       "get all students": {apitype: "get", dataset: "allstudentinfo", options: {spreadsheetid: STUDENT_INFO_SPREADSHEET}},
-      "get matching students": {apitype: "get", dataset: "studentinfo", options: {spreadsheetid: STUDENT_INFO_SPREADSHEET, first: "Ronald", last: "Weasley"}}
+      "get matching students": {apitype: "get", dataset: "studentinfo", options: {spreadsheetid: STUDENT_INFO_SPREADSHEET, fullname: "Weasley, Ronald"}},
+      "get layout": {apitype: "get", dataset: "layout", options: {spreadsheetid: STUDENT_INFO_SPREADSHEET}},
+      "get layoutdefs": {apitype: "get", dataset: "layoutdefinitions", options: {spreadsheetid: STUDENT_INFO_SPREADSHEET}},
+      "save note": {apitype: "post", dataset: "savenote", options: {spreadsheetid: STUDENT_INFO_SPREADSHEET, fullname: "Weasley, Ronald", cardnumber: "0", notes: "05/18/19|something not good\n02/02/02|note number 2\n03/03/03|a dandy third note"}}
     }
   }
   
