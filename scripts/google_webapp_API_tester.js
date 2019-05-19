@@ -63,6 +63,8 @@ const app = function () {
     },
     
     studentinfo: {
+      //"get all info": {apitype: "get", dataset: "all", options: {student: {spreadsheetid: STUDENT_INFO_SPREADSHEET}, layoutdef: {spreadsheetid: LAYOUT_INFO_SPREADSHEET}}},
+      "get all info": {apitype: "get", dataset: "all", options: {studentinfo_spreadsheetid: STUDENT_INFO_SPREADSHEET, layoutdefinitions_spreadsheetid: LAYOUT_INFO_SPREADSHEET} },
       "get all students": {apitype: "get", dataset: "allstudentinfo", options: {spreadsheetid: STUDENT_INFO_SPREADSHEET}},
       "get matching students": {apitype: "get", dataset: "studentinfo", options: {spreadsheetid: STUDENT_INFO_SPREADSHEET, fullname: "Weasley, Ronald"}},
       "get layout": {apitype: "get", dataset: "layout", options: {spreadsheetid: STUDENT_INFO_SPREADSHEET}},
