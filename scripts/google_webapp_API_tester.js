@@ -33,10 +33,12 @@ const app = function () {
     studentinfo: {
       apibase: 'https://script.google.com/macros/s/AKfycbxpMfjVsVXjZuSdkI5FABJHFY5azMdbep7YfMI_OVndxtN_VwI/exec',
       apikey: 'MV_studeninfoAPI'
-    }    
+    }
   };
 
   const STUDENT_INFO_SPREADSHEET = '17m8kxYjqTTGHsTFnD3VSTy7P4ztF9f9ggPJz4wTVdO4';
+  const LAYOUT_INFO_SPREADSHEET = '1pBVYZdKv1U6FErHhiI1mTiGemFDOY5CVCcPCa31bY9g';
+  
   const apiCallPremades = {
     test: {
       "get all rows": {apitype: "get", dataset: "getallrows", options: {}},
@@ -64,7 +66,7 @@ const app = function () {
       "get all students": {apitype: "get", dataset: "allstudentinfo", options: {spreadsheetid: STUDENT_INFO_SPREADSHEET}},
       "get matching students": {apitype: "get", dataset: "studentinfo", options: {spreadsheetid: STUDENT_INFO_SPREADSHEET, fullname: "Weasley, Ronald"}},
       "get layout": {apitype: "get", dataset: "layout", options: {spreadsheetid: STUDENT_INFO_SPREADSHEET}},
-      "get layoutdefs": {apitype: "get", dataset: "layoutdefinitions", options: {spreadsheetid: STUDENT_INFO_SPREADSHEET}},
+      "get layoutdefs": {apitype: "get", dataset: "layoutdefinitions", options: {spreadsheetid: LAYOUT_INFO_SPREADSHEET}},
       "save note": {apitype: "post", dataset: "savenote", options: {spreadsheetid: STUDENT_INFO_SPREADSHEET, fullname: "Weasley, Ronald", cardnumber: "0", notes: "05/18/19|something not good\n02/02/02|note number 2\n03/03/03|a dandy third note"}}
     }
   }
