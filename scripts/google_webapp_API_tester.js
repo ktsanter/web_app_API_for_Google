@@ -38,7 +38,7 @@ const app = function () {
     }
   };
 
-  const STUDENT_INFO_SPREADSHEET = '1Ie2Pk_vB-N8-Qg9mvc0mrS8MD_yUbW7Jhzwaefl6SHs'; //'17m8kxYjqTTGHsTFnD3VSTy7P4ztF9f9ggPJz4wTVdO4';
+  const STUDENT_INFO_SPREADSHEET = '17m8kxYjqTTGHsTFnD3VSTy7P4ztF9f9ggPJz4wTVdO4';
   const LAYOUT_INFO_SPREADSHEET = '1pBVYZdKv1U6FErHhiI1mTiGemFDOY5CVCcPCa31bY9g';
   
   const apiCallPremades = {
