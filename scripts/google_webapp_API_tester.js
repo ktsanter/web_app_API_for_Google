@@ -6,7 +6,9 @@
 const app = function () {
 	const page = {};
   
-	const settings = {};
+	const settings = {
+    elapsedtime: null
+  };
     
 	//-----------------------------------------------------------------------------    
   // info for Google web app APIs used in this application
@@ -36,7 +38,7 @@ const app = function () {
     }
   };
 
-  const STUDENT_INFO_SPREADSHEET = '17m8kxYjqTTGHsTFnD3VSTy7P4ztF9f9ggPJz4wTVdO4';
+  const STUDENT_INFO_SPREADSHEET = '1Ie2Pk_vB-N8-Qg9mvc0mrS8MD_yUbW7Jhzwaefl6SHs'; //'17m8kxYjqTTGHsTFnD3VSTy7P4ztF9f9ggPJz4wTVdO4';
   const LAYOUT_INFO_SPREADSHEET = '1pBVYZdKv1U6FErHhiI1mTiGemFDOY5CVCcPCa31bY9g';
   
   const apiCallPremades = {
@@ -63,12 +65,7 @@ const app = function () {
     },
     
     studentinfo: {
-      //"get all info": {apitype: "get", dataset: "all", options: {student: {spreadsheetid: STUDENT_INFO_SPREADSHEET}, layoutdef: {spreadsheetid: LAYOUT_INFO_SPREADSHEET}}},
       "get all info": {apitype: "get", dataset: "all", options: {studentinfo_spreadsheetid: STUDENT_INFO_SPREADSHEET, layoutdefinitions_spreadsheetid: LAYOUT_INFO_SPREADSHEET} },
-      "get all students": {apitype: "get", dataset: "allstudentinfo", options: {spreadsheetid: STUDENT_INFO_SPREADSHEET}},
-      "get matching students": {apitype: "get", dataset: "studentinfo", options: {spreadsheetid: STUDENT_INFO_SPREADSHEET, fullname: "Weasley, Ronald"}},
-      "get layout": {apitype: "get", dataset: "layout", options: {spreadsheetid: STUDENT_INFO_SPREADSHEET}},
-      "get layoutdefs": {apitype: "get", dataset: "layoutdefinitions", options: {spreadsheetid: LAYOUT_INFO_SPREADSHEET}},
       "save note": {apitype: "post", dataset: "savenote", options: {spreadsheetid: STUDENT_INFO_SPREADSHEET, fullname: "Weasley, Ronald", cardnumber: "0", notes: "05/18/19|something not good\n02/02/02|note number 2\n03/03/03|a dandy third note"}}
     }
   }
@@ -264,6 +261,7 @@ const app = function () {
     elemContainer.classList.add('results');
     
     var elemTitle = document.createElement('div');
+    elemTitle.id = 'overallResults';
     elemTitle.innerHTML = 'overall results';
     elemContainer.appendChild(elemTitle);
     
@@ -322,12 +320,15 @@ const app = function () {
     page.results.innerHTML = ''
     page.formattedresults.innerHTML = '';
 
+    var startTime = new Date();
     var requestData = null;
     if (requestType == 'get') {
       requestData = await googleSheetWebAPI.webAppGet(apiInfo[apiKey], dataset, params, _reportError);
     } else {
       requestData = await googleSheetWebAPI.webAppPost(apiInfo[apiKey], dataset, params, _reportError);
     }
+    settings.elapsedtime = (new Date() - startTime) / 1000.0;
+    document.getElementById('overallResults').innerHTML = 'overall results (' + settings.elapsedtime + 's)';    
     
     if (requestData == null) {
       _setNotice('internal error - requestData is null');
