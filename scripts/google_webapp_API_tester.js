@@ -67,7 +67,6 @@ const app = function () {
     studentinfo: {
       "validate": {apitype: "get", dataset: "validate", options: {studentinfo_spreadsheetid: STUDENT_INFO_SPREADSHEET} },
       "get all info": {apitype: "get", dataset: "all", options: {studentinfo_spreadsheetid: STUDENT_INFO_SPREADSHEET} },
-      "get all info + badges": {apitype: "get", dataset: "all", options: {studentinfo_spreadsheetid: STUDENT_INFO_SPREADSHEET, supplementarybadgeurl: SUPPLEMENTARY_BADGE_URL} },
       "save note": {apitype: "post", dataset: "savenote", options: {spreadsheetid: STUDENT_INFO_SPREADSHEET, fullname: "Weasley, Ronald", cardnumber: "0", notes: "05/18/19|something not good\n02/02/02|note number 2\n03/03/03|a dandy third note"}}
     }
   }
