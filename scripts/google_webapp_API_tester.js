@@ -329,7 +329,7 @@ const app = function () {
       requestData = await googleSheetWebAPI.webAppPost(apiInfo[apiKey], dataset, params, _reportError);
     }
     settings.elapsedtime = (new Date() - startTime) / 1000.0;
-    document.getElementById('overallResults').innerHTML = 'overall results (' + settings.elapsedtime + 's)';    
+    document.getElementById('overallResults').innerHTML = (requestData.success ? 'SUCCESS' : 'FAIL') + ' (' + settings.elapsedtime + 's)';    
     
     if (requestData == null) {
       _setNotice('internal error - requestData is null');
@@ -342,7 +342,7 @@ const app = function () {
       _setNotice('');
     }
     
-    page.results.innerHTML = (requestData.success ? "SUCCESS": "FAIL") + ' ' + JSON.stringify(requestData);
+    page.results.innerHTML = JSON.stringify(requestData);
     if (requestData.success) {
       page.formattedresults.innerHTML = _formatResults(requestType, requestData); 
     }
