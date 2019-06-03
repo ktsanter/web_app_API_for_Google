@@ -32,6 +32,11 @@ const app = function () {
       apikey: 'miGoogle2019_webappAPIDemo'
     },
     
+    audioqueryresponse: {
+      apibase: 'https://script.google.com/macros/s/AKfycbxV2GBJNOReNqHyaVSOgwPkANsjM3H8ZqdnJKNx0OZhCGraj5rO/exec',
+      apikey: 'MVaudioqueryresponseAPI'
+    },
+    
     studentinfo: {
       apibase: 'https://script.google.com/macros/s/AKfycbxpMfjVsVXjZuSdkI5FABJHFY5azMdbep7YfMI_OVndxtN_VwI/exec',
       apikey: 'MV_studeninfoAPI'
@@ -64,10 +69,14 @@ const app = function () {
       "put review date": {apitype: "post", dataset: "reviewdate", options: {criteria: {coursekey: 'alg1a'}, newdata:{reviewdate: "'05/14/2019"}}}
     },
     
+    audioqueryresponse: {
+      "get config": {apitype: "get", dataset: "config", options: {sourcefileid: '1a5u8SfLCSpMc1fmgUmIWMWHLz8kesSPbJB-ZdgDwg3s'}}
+    },
+    
     studentinfo: {
       "validate": {apitype: "get", dataset: "validate", options: {studentinfo_spreadsheetid: STUDENT_INFO_SPREADSHEET} },
       "get all info": {apitype: "get", dataset: "all", options: {studentinfo_spreadsheetid: STUDENT_INFO_SPREADSHEET} },
-      "save note": {apitype: "post", dataset: "savenote", options: {spreadsheetid: STUDENT_INFO_SPREADSHEET, fullname: "Weasley, Ronald", cardnumber: "0", notes: "05/18/19|something not good\n02/02/02|note number 2\n03/03/03|a dandy third note"}}
+      "save note": {apitype: "post", dataset: "savenote", options: {spreadsheetid: STUDENT_INFO_SPREADSHEET, indexval: "Weasley, Ronald", cardnumber: "0", notes: "05/18/19|something not good\n02/02/02|note number 2\n03/03/03|a fine and dandy third note"}}
     }
   }
   
