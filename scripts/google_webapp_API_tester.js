@@ -40,6 +40,11 @@ const app = function () {
     studentinfo: {
       apibase: 'https://script.google.com/macros/s/AKfycbxpMfjVsVXjZuSdkI5FABJHFY5azMdbep7YfMI_OVndxtN_VwI/exec',
       apikey: 'MV_studeninfoAPI'
+    },
+    
+    welcome: {
+      apibase: 'https://script.google.com/macros/s/AKfycbweqaXGa76eKl_Tuj84UgUyc21K8ty9TE7Je1ffN9D2ZO4CpWxE/exec',
+      apikey: 'MV_welcomeAPI'
     }
   };
 
@@ -77,6 +82,10 @@ const app = function () {
       "validate": {apitype: "get", dataset: "validate", options: {studentinfo_spreadsheetid: STUDENT_INFO_SPREADSHEET} },
       "get all info": {apitype: "get", dataset: "all", options: {studentinfo_spreadsheetid: STUDENT_INFO_SPREADSHEET} },
       "save note": {apitype: "post", dataset: "savenote", options: {spreadsheetid: STUDENT_INFO_SPREADSHEET, indexval: "Weasley, Ronald", cardnumber: "0", notes: "05/18/19|something not good\n02/02/02|note number 2\n03/03/03|a fine and dandy third note"}}
+    },
+    
+    welcome: {
+      "courseinfo": {apitype: "get", dataset: "courseinfo", options: {coursekey: 'html_css' } }
     }
   }
   
