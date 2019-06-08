@@ -85,6 +85,7 @@ const app = function () {
     },
     
     welcome: {
+      "navinfo": {apitype: "get", dataset: "navinfo", options: {} },
       "courseinfo": {apitype: "get", dataset: "courseinfo", options: {coursekey: 'html_css' } }
     }
   }
