@@ -45,7 +45,12 @@ const app = function () {
     welcome: {
       apibase: 'https://script.google.com/macros/s/AKfycbweqaXGa76eKl_Tuj84UgUyc21K8ty9TE7Je1ffN9D2ZO4CpWxE/exec',
       apikey: 'MV_welcomeAPI'
-    }
+    },
+    
+    pacingcalendar: {
+      apibase: 'https://script.google.com/macros/s/AKfycbzp-DIszFmZMUasJwHnzwcQ9VE3NmI2QmbUvawRMq8fnDfuBCQ/exec',
+      apikey: 'MVpacinginfov2'
+    }    
   };
 
   const STUDENT_INFO_SPREADSHEET = '17m8kxYjqTTGHsTFnD3VSTy7P4ztF9f9ggPJz4wTVdO4';
@@ -87,6 +92,10 @@ const app = function () {
     welcome: {
       "navinfo": {apitype: "get", dataset: "navinfo", options: {} },
       "courseinfo": {apitype: "get", dataset: "courseinfo", options: {coursekey: 'html_css' } }
+    },
+    
+    pacingcalendar: {
+      "getcalendar": {apitype: "get", dataset: "pacingcalendar", options: {} }
     }
   }
   
