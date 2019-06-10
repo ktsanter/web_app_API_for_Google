@@ -1,6 +1,7 @@
 "use strict";
 //
-// TODO: 
+// TODO: add copy button
+// TODO: refactor to use class libraries 
 //
 
 const app = function () {
@@ -96,7 +97,7 @@ const app = function () {
     
     pacingcalendar: {
       "getcalendar": {apitype: "get", dataset: "pacingcalendar", options: {} },
-      "getguide": {apitype: "get", dataset: "pacingguide", options: {coursekey: 'fpb'} }
+      "getguide": {apitype: "get", dataset: "pacingguide", options: {coursekey: 'fpb', term: 'semester1'} }
     }
   }
   
