@@ -1,6 +1,5 @@
 "use strict";
 //
-// TODO: add copy button
 // TODO: refactor to use class libraries 
 //
 
@@ -296,10 +295,15 @@ const app = function () {
     elemTitle.id = 'overallResults';
     elemTitle.innerHTML = 'overall results';
     elemContainer.appendChild(elemTitle);
+
+    page.copybutton = document.createElement('button');
+    page.copybutton.innerHTML = 'copy';
+    page.copybutton.addEventListener('click', _handleCopy, false);
+    elemContainer.appendChild(page.copybutton);
     
     page.results = document.createElement('div');
     page.results.classList.add('results-interior');
-    elemContainer.appendChild(page.results);
+    elemContainer.appendChild(page.results);    
     
     return elemContainer;
   }
@@ -469,6 +473,10 @@ const app = function () {
   function _handleDoRequestButton(e) {
     _doRequest();
   } 
+  
+  function _handleCopy(e) {
+    new ClipboardCopy()._copyToClipboard(page.results.innerHTML);
+  }
   
 	//---------------------------------------
 	// utility functions
