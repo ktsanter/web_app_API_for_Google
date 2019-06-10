@@ -95,7 +95,8 @@ const app = function () {
     },
     
     pacingcalendar: {
-      "getcalendar": {apitype: "get", dataset: "pacingcalendar", options: {} }
+      "getcalendar": {apitype: "get", dataset: "pacingcalendar", options: {} },
+      "getguide": {apitype: "get", dataset: "pacingguide", options: {coursekey: 'fpb'} }
     }
   }
   
