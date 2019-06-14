@@ -97,7 +97,8 @@ const app = function () {
     pacingcalendar: {
       "getcalendar": {apitype: "get", dataset: "pacingcalendar", options: {} },
       "getguide": {apitype: "get", dataset: "pacingguide", options: {coursekey: 'fpb', term: 'semester'} },
-      "courselist": {apitype: "get", dataset: "courselist", options: {} }
+      "courselist": {apitype: "get", dataset: "courselist", options: {} },
+      "calendar and guide": {apitype: "get", dataset: "calendarandguide", options: {coursekey: 'game_design', term: 'semester'} }
     }
   }
   
