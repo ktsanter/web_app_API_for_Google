@@ -50,7 +50,12 @@ const app = function () {
     pacingcalendar: {
       apibase: 'https://script.google.com/macros/s/AKfycbzp-DIszFmZMUasJwHnzwcQ9VE3NmI2QmbUvawRMq8fnDfuBCQ/exec',
       apikey: 'MVpacinginfov2'
-    }    
+    },
+    
+    commentbuddy: {
+      apibase: 'https://script.google.com/macros/s/AKfycbxgZL5JLJhR-6jWqbxb3s7aWG5aqkb-EDENYyIdnBT4vVpKHq8/exec',
+      apikey: 'MV_commentbuddy2'
+    }  
   };
 
   const STUDENT_INFO_SPREADSHEET = '17m8kxYjqTTGHsTFnD3VSTy7P4ztF9f9ggPJz4wTVdO4';
@@ -99,6 +104,10 @@ const app = function () {
       "getguide": {apitype: "get", dataset: "pacingguide", options: {coursekey: 'fpb', term: 'semester'} },
       "courselist": {apitype: "get", dataset: "courselist", options: {} },
       "calendar and guide": {apitype: "get", dataset: "calendarandguide", options: {coursekey: 'game_design', term: 'semester'} }
+    },
+    
+    commentbuddy: {
+      "cbdata": {apitype: "get", dataset: "cbdata", options: {sourcefileid: '1mo3e7xJdOYO4pVZ_6SrRlpROkuIgh_G0M4llM78olvM'} }
     }
   }
   
