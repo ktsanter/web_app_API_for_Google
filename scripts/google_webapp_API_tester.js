@@ -107,10 +107,11 @@ const app = function () {
     },
     
     commentbuddy: {
-      "cbdata": {apitype: "get", dataset: "cbdata", options: {sourcefileid: '1mo3e7xJdOYO4pVZ_6SrRlpROkuIgh_G0M4llM78olvM'} }
+      "cbdata": {apitype: "get", dataset: "cbdata", options: {sourcefileid: '1mo3e7xJdOYO4pVZ_6SrRlpROkuIgh_G0M4llM78olvM'} },
+      "savenote": {apitype: "post", dataset: "newcomment", options: {sourcefileid: '1mo3e7xJdOYO4pVZ_6SrRlpROkuIgh_G0M4llM78olvM', tags: 'tag1, tag2', comment: 'a brand new comment', hovertext:'do the hover'} }
     }
   }
-  
+
 	//---------------------------------------
 	// get things going
 	//----------------------------------------
