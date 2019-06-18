@@ -55,6 +55,11 @@ const app = function () {
     commentbuddy: {
       apibase: 'https://script.google.com/macros/s/AKfycbxgZL5JLJhR-6jWqbxb3s7aWG5aqkb-EDENYyIdnBT4vVpKHq8/exec',
       apikey: 'MV_commentbuddy2'
+    },
+    
+    toolindex: {
+      apibase: 'https://script.google.com/macros/s/AKfycbxAHeZ1fkN8Ei82SWPytXwLqDa2FqwJCgDyIVSbbRNmimujxYcu/exec',
+      apikey: 'KTS_toolindex'
     }  
   };
 
@@ -109,6 +114,10 @@ const app = function () {
     commentbuddy: {
       "cbdata": {apitype: "get", dataset: "cbdata", options: {sourcefileid: '1mo3e7xJdOYO4pVZ_6SrRlpROkuIgh_G0M4llM78olvM'} },
       "savenote": {apitype: "post", dataset: "newcomment", options: {sourcefileid: '1mo3e7xJdOYO4pVZ_6SrRlpROkuIgh_G0M4llM78olvM', tags: 'tag1, tag2', comment: 'a brand new comment', hovertext:'do the hover'} }
+    },
+    
+    toolindex: {
+      "indexinfo": {apitype: "get", dataset: "indexinfo", options: {sourcefileid: '1-M4mw9TFt7J7ytZdn_-mDP95HjSAH84oupOVBG-XNZM'} }
     }
   }
 
