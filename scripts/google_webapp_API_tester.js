@@ -95,7 +95,14 @@ const app = function () {
     },
     
     audioqueryresponse: {
-      "get config": {apitype: "get", dataset: "config", options: {sourcefileid: '1a5u8SfLCSpMc1fmgUmIWMWHLz8kesSPbJB-ZdgDwg3s'}}
+      "get config": {apitype: "get", dataset: "config", options: {sourcefileid: '1a5u8SfLCSpMc1fmgUmIWMWHLz8kesSPbJB-ZdgDwg3s'}},
+      "audiodata": {apitype: "get", dataset: "audiodata", options: {
+        url1: 'https://drive.google.com/uc?id=1QJRmPvyx_x1Z2bHWFTD5egmp62JCwZ-A',
+        url2: 'https://drive.google.com/uc?id=1fvMD29kV7zSRQ0B3ySEdrvbtZJGSFHnH',
+        url3: 'https://drive.google.com/uc?id=1QDMoAmIQ4GTTTXeRLL4aG4GlUcaHDqNU',
+        url4: 'https://drive.google.com/uc?id=1W3KIP6mGvpXOZzA5A_SR5s5JcHKOvibl',
+        url5: 'https://drive.google.com/uc?id=1H464ldaoAgeHHbo3K-MqB87y8wwNqXkI'  
+      }}
     },
     
     studentinfo: {
