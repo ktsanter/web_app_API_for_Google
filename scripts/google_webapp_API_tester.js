@@ -60,6 +60,11 @@ const app = function () {
     toolindex: {
       apibase: 'https://script.google.com/macros/s/AKfycbxAHeZ1fkN8Ei82SWPytXwLqDa2FqwJCgDyIVSbbRNmimujxYcu/exec',
       apikey: 'KTS_toolindex'
+    },
+    
+    fileblobgetter: {
+      apibase: 'https://script.google.com/macros/s/AKfycbyifKwgZcq4c82IyhXwCiiDoIDeYxJYdva-kdFLuDK4cX2gyWk/exec',
+      apikey: 'MV_getFileAPI'
     }  
   };
 
@@ -118,6 +123,10 @@ const app = function () {
     
     toolindex: {
       "indexinfo": {apitype: "get", dataset: "indexinfo", options: {sourcefileid: '1-M4mw9TFt7J7ytZdn_-mDP95HjSAH84oupOVBG-XNZM'} }
+    },
+    
+    fileblobgetter: {
+      "getfiles": {apitype: "get", dataset: "getfiles", options: {id1: '1QJRmPvyx_x1Z2bHWFTD5egmp62JCwZ-A', id2: '1fvMD29kV7zSRQ0B3ySEdrvbtZJGSFHnH'} }
     }
   }
 
